@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="aspiration" class="AspirationUnfinishedBusiness" module="aspirations.aspiration_tuning" muid="14FB71B5FC7B8868" description="The aspiration used to track unfinished business." instance_subclasses_only="False" parents="AspirationBasic" path="Aspirations\Descriptions" use_guid_for_reference="True">
+        <Deleted name="can_complete_without_objectives" muid="C5B6E1F20F46E9C" />
+
+        <Deleted name="objective_completion_type" muid="CC84FAB2547DAA8A" />
+    </Instance>
+
+    <VersionHistory>
+        <ActionList>
+            <Action type="kRemove" old_muid="D9441E72AA3DD32F" />
+        </ActionList>
+
+        <ActionList>
+            <Action type="kRemove" old_muid="BBEA3FE9EC1FF066" />
+        </ActionList>
+    </VersionHistory>
+</TuningRoot>

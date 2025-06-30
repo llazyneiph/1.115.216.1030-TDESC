@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="away_action" class="CareerTone" module="careers.career_interactions" muid="1790BFAB74BDCCDB" description="Specialized away action that acts as a Career Tone." instance_needs_reference="True" instance_subclasses_only="False" parents="AwayAction" path="AwayActions\Descriptions" use_guid_for_reference="True">
+        <TunableList name="dominant_tone_loot_actions" class="TunableList" display="Dominant Tone Loot Actions" muid="A3713C177BED7B5A" description="Loot to apply at the end of a work period if this tone ran for the&#xA;most amount of time out of all tones." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="EFA5F89A4278643D" allow_none="False" Deprecated="False" filter="0" group="General" restrict="LootActions,RandomWeightedLoot" />
+        </TunableList>
+
+        <Tunable type="float" name="performance_multiplier" class="Tunable" default="1" display="Performance Multiplier" muid="FC9EE0355978B7E" description="Performance multiplier applied to work performance gain." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+
+        <TunableList name="sim_filter_periodic_loots" class="TunableList" display="Sim Filter Periodic Loots" muid="4541D6EA2F3FBF15" description="Periodic loots applied to sims from a sim filter.  " Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableSimFilterPeriodicLoots" muid="CE71A8A30E1E70EA" description="Periodic loots to apply to the Sims specified via a Sim filter.&#xA;&#xA;Example Usages:&#xA;-Gain relationship with 2 coworkers every hour.&#xA;-Every hour, there is a 5% chance of meeting a new coworker." Deprecated="False" filter="0" group="General">
+                <TunableTuple name="chance" class="TunableSuccessChance" display="Chance" muid="82BCAA2A4272E7F5" description="Chance per hour of loot being applied." Deprecated="False" filter="0" group="General">
+                    <Tunable type="float" name="base_chance" class="TunablePercent" default="100" display="Base Chance" muid="11B2A1D87046EB1A" min="0" max="100" description="The basic chance of success." Deprecated="False" filter="0" group="General" />
+                    <TunableList name="multipliers" class="TunableList" display="Multipliers" muid="D78B3C0F272EE205" description="A list of multipliers to apply to base_chance." Deprecated="False" filter="0" group="General">
+                        <TunableTuple class="TunableTuple" muid="1FC67BF15F2A2FBA" Deprecated="False" filter="0" group="General">
+                            <Tunable type="float" name="multiplier" class="TunableRange" default="1" display="Multiplier" muid="7326D52B9059923F" min="0" max="None" description="The multiplier to apply to base_chance if the associated&#xA;tests pass." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                            <TdescFragTag name="tests" class="TunableTestSet" display="Tests" muid="38D76C781C738B59" description="A series of tests that must pass in order for multiplier to&#xA;be applied." filter="0" group="General" />
+                        </TunableTuple>
+                    </TunableList>
+                </TunableTuple>
+                <Tunable type="action" name="loot" class="TunableReference" display="Loot" muid="26342C38B26BA3BE" description="Loot actions to apply to the two Sims. The Sim in the &#xA;career is Actor, and if Targeted is enabled those Sims&#xA;will be TargetSim." allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions" />
+                <TunableVariant type="None" name="max_sims" class="OptionalTunable" default="disabled" display="Max Sims" muid="E5F3E13D93ECE0AF" description="If enabled and the Sim filter finds more than the specified&#xA;number of Sims, the loot will only be applied a random&#xA;selection of this many Sims." Deprecated="False" filter="0" group="General">
+                    <Tunable name="disabled" class="TunableExistance" display="Disabled" muid="8B8F9A6EDF6399AC" />
+                    <Tunable type="int" name="enabled" class="TunableRange" default="1" display="Enabled" muid="706FDCB5F3CD293F" min="1" max="None" tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                </TunableVariant>
+                <Tunable type="sim_filter" name="sim_filter" class="TunableReference" display="Sim Filter" muid="8E102A823B28A086" description="Filter for specifying who to set at target Sims for loot&#xA;application." allow_none="False" Deprecated="False" filter="0" group="General" restrict="TunableSimFilter" />
+            </TunableTuple>
+        </TunableList>
+
+        <TunableList name="working_sim_periodic_loots" class="TunableList" display="Working Sim Periodic Loots" muid="614AAB4119B63F5B" description="Periodic loots applied to the working sim. " Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableWorkingSimPeriodicLoots" muid="1CB37CE88C918B23" description="Periodic loots to apply to the working Sim." Deprecated="False" filter="0" group="General">
+                <TunableTuple name="chance" class="TunableSuccessChance" display="Chance" muid="5AF120CE8BE34670" description="Chance per hour of loot being applied." Deprecated="False" filter="0" group="General">
+                    <Tunable type="float" name="base_chance" class="TunablePercent" default="100" display="Base Chance" muid="AA1801E01C4BB37F" min="0" max="100" description="The basic chance of success." Deprecated="False" filter="0" group="General" />
+                    <TunableList name="multipliers" class="TunableList" display="Multipliers" muid="810627AA7F6AD4AF" description="A list of multipliers to apply to base_chance." Deprecated="False" filter="0" group="General">
+                        <TunableTuple class="TunableTuple" muid="3881947B1EAE50BD" Deprecated="False" filter="0" group="General">
+                            <Tunable type="float" name="multiplier" class="TunableRange" default="1" display="Multiplier" muid="BC7C5507A38CB42A" min="0" max="None" description="The multiplier to apply to base_chance if the associated&#xA;tests pass." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                            <TdescFragTag name="tests" class="TunableTestSet" display="Tests" muid="1572427C2E79DA61" description="A series of tests that must pass in order for multiplier to&#xA;be applied." filter="0" group="General" />
+                        </TunableTuple>
+                    </TunableList>
+                </TunableTuple>
+                <Tunable type="action" name="loot" class="TunableReference" display="Loot" muid="AEC55E3B0AF8D21B" description="Loot actions to apply to the working/Actor Sim." allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions" />
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>

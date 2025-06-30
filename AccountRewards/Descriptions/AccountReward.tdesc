@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="account_reward" class="AccountReward" module="account_rewards.account_reward_tuning" muid="8BAE585E02EB010D" description="Tuning data for an account reward.&#xA;Additionally includes data for the game items claimed via this reward." instance_needs_reference="True" instance_subclasses_only="False" path="AccountRewards\Descriptions" use_guid_for_reference="True">
+        <Tunable type="int" name="category" class="TunableLocalizedString" default="0x0" display="Category" muid="56432CB63A31CA4D" description="Category associated with the reward item(s).&#xA;e.g. Fridge, Hair, Table" Deprecated="False" export_modes="client_binary" filter="0" group="UI" />
+
+        <Tunable type="ResourceKey" name="image" class="TunableResourceKey" default="None" display="Image" muid="78CA2D8E899D4532" description="Reward preview image." Deprecated="False" export_modes="client_binary" filter="0" group="UI" resource_types="0x2f7d0004" />
+
+        <TunableList name="items" class="TunableList" display="Items" muid="B3597CCFAC8A3C93" description="List of items that are claimed via this reward." Deprecated="False" export_modes="client_binary" filter="0" group="General">
+            <TunableVariant type="None" class="TunableVariant" default="build_buy_item" muid="579F82435636250A" description="The type of AccountRewardItem." Deprecated="False" export_modes="client_binary" filter="0" group="General">
+                <TunableTuple name="aspiration_track_item" class="Tunable_AspirationTrackAccountRewardItem" display="Aspiration Track Item" muid="6F015A4EEBCB4D43" description="Aspiration Track reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="aspiration_track" name="item_resource" class="TunableReference" display="Item Resource" muid="260A59E07D5FD252" description="Reference aspiration track for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="build_buy_item" class="Tunable_BuildBuyAccountRewardItem" display="Build Buy Item" muid="CA2044EB802E518A" description="Build Buy reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="object" name="item_resource" class="TunableReference" display="Item Resource" muid="ECA7E646CF068A9B" description="Reference object definition for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="cas_item" class="Tunable_CASAccountRewardItem" display="Cas Item" muid="C581721D62DE3295" description="Create-A-Sim reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="caspart" name="item_resource" class="TunableReference" display="Item Resource" muid="F5E16911F9D55B6B" description="CAS Part resource for this item." Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="catalog_product_floor_pattern_item" class="Tunable_CatalogProductFloorPatternAccountRewardItem" display="Catalog Product Floor Pattern Item" muid="1C646DE09A79E4FC" description="Floor Pattern catalog product item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="floorpattern" name="item_resource" class="TunableReference" display="Item Resource" muid="2570CF3635E9A396" description="Floor Pattern resource for this item." Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="catalog_product_wall_pattern_item" class="Tunable_CatalogProductWallPatternAccountRewardItem" display="Catalog Product Wall Pattern Item" muid="B02CC1BF8045C64D" description="Wall Pattern catalog product item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="wallpattern" name="item_resource" class="TunableReference" display="Item Resource" muid="5B5BB5D69A71FD1B" description="Wall Pattern resource for this item." Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="consumable_item" class="Tunable_ConsumableAccountRewardItem" display="Consumable Item" muid="E732CB3BF0B27AB1" description="Consumable reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="action" name="item_resource" class="TunableReference" display="Item Resource" muid="71E0B225FF553C23" description="Reference consumable for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="lot_trait_item" class="Tunable_LotTraitAccountRewardItem" display="Lot Trait Item" muid="C80DA1B7B2489E34" description="Lot Trait reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="zone_modifier" name="item_resource" class="TunableReference" display="Item Resource" muid="2569C4382C4AB1F9" description="Reference lot trait for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="radio_song_item" class="Tunable_RadioSongAccountRewardItem" display="Radio Song Item" muid="837CA4552102191C" description="Radio Song reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="str" name="item_resource" class="TunableStringHash64" default="" display="Item Resource" muid="100BC8A48DE32162" description="Song ID for this item." binary_type="hashcode64" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="radio_station_item" class="Tunable_RadioStationAccountRewardItem" display="Radio Station Item" muid="342D797EB1A4FB08" description="Radio Station reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="str" name="genre_id" class="TunableStringHash64" default="" display="Genre Id" muid="5EBBE2211572A664" description="Reference to Genre Identifier string used to identify a radio station.  This needs to correspond to&#xA;the 'Genre' identifier used MusicData.trax data file.  Since there are multiple Stereo Channels per Genre, this only needs&#xA;to be set in once place." allow_none="True" binary_type="hashcode64" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                    <Tunable type="object_state" name="item_resource" class="TunableReference" display="Item Resource" muid="5D13A9DB2D73DE0F" description="Reference to a Radio Station object state value for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" restrict="AudioChannel" />
+                </TunableTuple>
+                <TunableTuple name="recipe_item" class="Tunable_RecipeAccountRewardItem" display="Recipe Item" muid="BB5778B865983FB8" description="Recipe reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="recipe" name="item_resource" class="TunableReference" display="Item Resource" muid="4B4B4C00320C8C21" description="Reference recipe for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+                <TunableTuple name="trait_item" class="Tunable_TraitAccountRewardItem" display="Trait Item" muid="1CE2FB851F7E70DD" description="Trait reward item." Deprecated="False" filter="0" group="General">
+                    <Tunable type="trait" name="item_resource" class="TunableReference" display="Item Resource" muid="B381E069F957E22C" description="Reference trait for this item." allow_none="False" Deprecated="False" export_modes="client_binary" filter="0" group="General" />
+                </TunableTuple>
+            </TunableVariant>
+        </TunableList>
+
+        <Tunable type="int" name="location_tip" class="TunableLocalizedString" default="0x0" display="Location Tip" muid="B060CE6B7C586F03" description="Where you can find the reward item(s) in game.&#xA;e.g. CAS Summer Outfits, BB under Tables" Deprecated="False" export_modes="client_binary" filter="0" group="UI" />
+
+        <Tunable type="int" name="reward_description" class="TunableLocalizedString" default="0x0" display="Reward Description" muid="1A85D5810F91C157" description="Reward description." Deprecated="False" export_modes="client_binary" filter="0" group="UI" />
+
+        <Tunable type="int" name="reward_name" class="TunableLocalizedString" default="0x0" display="Reward Name" muid="FAD5BBBCDD9F21C1" description="Reward name." Deprecated="False" export_modes="client_binary" filter="0" group="UI" />
+
+        <Tunable type="ResourceKey" name="reward_thumbnail_image" class="TunableResourceKey" default="None" display="Reward Thumbnail Image" muid="A4DCA04AEA0BD1AD" description="Image to show in the thumbnail on the FSI." Deprecated="False" export_modes="client_binary" filter="0" group="UI" resource_types="0x2f7d0004" />
+
+        <TunableVariant type="None" name="reward_timeline_image" class="TunableVariant" default="none" display="Reward Timeline Image" muid="83DEB91F0F75C88" description="Image to show in the cell on the Timeline (progression)." Deprecated="False" export_modes="client_binary" filter="0" group="UI">
+            <Tunable type="ResourceKey" name="large_image" class="TunableResourceKey" default="None" display="Large Image" muid="AEFC43015FCAD8C4" description="Large image variant." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+            <Tunable name="none" class="TunableExistance" display="None" muid="C279C233D59B041B" />
+            <Tunable type="ResourceKey" name="small_image" class="TunableResourceKey" default="None" display="Small Image" muid="28AE32D4EA4475EF" description="Small image variant." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+        </TunableVariant>
+
+        <Tunable type="ResourceKey" name="small_image" class="TunableResourceKey" default="None" display="Small Image" muid="F8BF8B7884D83355" description="Image to show in the cell on the Timeline (progression)." Deprecated="True" filter="0" group="UI" resource_types="0x2f7d0004" />
+    </Instance>
+
+    <VersionHistory>
+        <ActionList />
+    </VersionHistory>
+</TuningRoot>
