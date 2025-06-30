@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="RankedStatistic" i="statistic" m="statistics.ranked_statistic" n="Statistic_ClanRenown" s="0xE0BEEF">
+  <T n="display_name">0xE0000001<!--CLAN RENOWN--></T>
+  <T n="stat_description">0xE0000002<!--Tracks the family's influence within the royal court.--></T>
+  <L n="rank_tuning">
+    <U>
+      <T n="key">0</T>
+      <U n="value">
+        <T n="rank_name">0xE0001000<!--Unproven--></T>
+        <T n="rank_description">0xE0001100<!--A fledgling clan with little sway in the court.--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">1</T>
+      <U n="value">
+        <T n="rank_name">0xE0002000<!--Recognized--></T>
+        <T n="rank_description">0xE0002100<!--Service to the royal family has earned some respect.--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">2</T>
+      <U n="value">
+        <T n="rank_name">0xE0003000<!--Established--></T>
+        <T n="rank_description">0xE0003100<!--Victories and alliances grant noticeable influence.--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">3</T>
+      <U n="value">
+        <T n="rank_name">0xE0004000<!--Distinguished--></T>
+        <T n="rank_description">0xE0004100<!--The clan commands respect across the empire.--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">4</T>
+      <U n="value">
+        <T n="rank_name">0xE0005000<!--Legendary--></T>
+        <T n="rank_description">0xE0005100<!--The family's renown shapes the future of the realm.--></T>
+      </U>
+    </U>
+  </L>
+  <L n="event_intervals">
+    <T>100</T>
+    <T>100</T>
+    <T>100</T>
+    <T>100</T>
+  </L>
+  <L n="event_data">
+    <U>
+      <T n="key">0</T>
+      <U n="value">
+        <L n="level_down_loot" />
+        <L n="loot" />
+        <L n="loot_always" />
+        <L n="loot_always_on_load" />
+        <T n="rank_up">True</T>
+        <L n="tests" />
+        <T n="tooltip">0x0</T>
+      </U>
+    </U>
+    <U>
+      <T n="key">1</T>
+      <U n="value">
+        <L n="level_down_loot" />
+        <L n="loot" />
+        <L n="loot_always" />
+        <L n="loot_always_on_load" />
+        <T n="rank_up">True</T>
+        <L n="tests" />
+        <T n="tooltip">0x0</T>
+      </U>
+    </U>
+    <U>
+      <T n="key">2</T>
+      <U n="value">
+        <L n="level_down_loot" />
+        <L n="loot" />
+        <L n="loot_always" />
+        <L n="loot_always_on_load" />
+        <T n="rank_up">True</T>
+        <L n="tests" />
+        <T n="tooltip">0x0</T>
+      </U>
+    </U>
+    <U>
+      <T n="key">3</T>
+      <U n="value">
+        <L n="level_down_loot" />
+        <L n="loot" />
+        <L n="loot_always" />
+        <L n="loot_always_on_load" />
+        <T n="rank_up">True</T>
+        <L n="tests" />
+        <T n="tooltip">0x0</T>
+      </U>
+    </U>
+  </L>
+  <T n="persistable">True</T>
+  <T n="decay_rate">0</T>
+</I>
