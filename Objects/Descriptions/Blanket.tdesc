@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="object" class="Blanket" module="objects.decorative.blanket" muid="5B31BD7DB5D1927A" description="Implementation of a blanket object." instance_needs_reference="True" instance_subclasses_only="False" parents="GameObject, ScriptObject" path="Objects\Descriptions" use_guid_for_reference="True">
+        <Tunable type="bool" name="_allow_different_multi_sim_idles" class="Tunable" default="True" display="Allow Different Multi Sim Idles" muid="EB2BBEDD591F6790" description="If True, multi-Sim postures that target this object will allow the Sim and the linked Sim to use different&#xA;idle animations. If False, then block idles if the Sims in the multi-Sim posture are trying to do different&#xA;idles." Deprecated="False" filter="0" group="General" />
+    </Instance>
+</TuningRoot>

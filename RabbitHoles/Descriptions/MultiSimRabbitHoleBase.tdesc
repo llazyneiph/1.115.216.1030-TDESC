@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="rabbit_hole" class="MultiSimRabbitHoleBase" module="rabbit_hole.multi_sim_rabbit_hole" muid="444457354794AA02" description="Base class for any rabbit holes that expect multiple sims.&#xA;&#xA;As of 1/12/2023, there are some assumptions being made that might need to change:&#xA;1.  The rabbit hole participant list is static.&#xA;2.  The rabbit hole participants are always given in the same order.&#xA;3.  The 'sim' and 'sim_id' fields in rabbit hole can be any of the sims in the&#xA;    rabbit hole.&#xA;4.  If different affordances are needed for each sim, they all share the same&#xA;    duration." instance_needs_reference="True" instance_subclasses_only="True" parents="RabbitHole" path="RabbitHoles\Descriptions" use_guid_for_reference="True" />
+</TuningRoot>

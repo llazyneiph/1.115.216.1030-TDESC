@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="relbit" class="RelationshipLabelBit" module="relationships.relationship_bit" muid="E7F6B3CCFE92EA48" description="A relationship bit specifically intended to represent the relationship label" instance_needs_reference="True" instance_subclasses_only="False" parents="RelationshipBit" path="RelationshipBits\Descriptions" use_guid_for_reference="True" />
+</TuningRoot>

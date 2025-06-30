@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="drama_node" class="MultiUnitEventDramaNode" module="drama_scheduler.multi_unit_drama_node" muid="7407C68A77BCC365" description="A drama node that represents a Multi Unit Event occurring on a Residential Rental&#xA;Unit, occupied by a tenant." instance_subclasses_only="False" parents="SituationDramaNode, BaseDramaNode" path="DramaNodes\Descriptions" use_guid_for_reference="True">
+        <Tunable type="bool" name="common_area_event" class="Tunable" default="False" display="Common Area Event" muid="99891D328D5FBB69" description="When this flag is set to True, this event applies to the common area of the&#xA;unit rather than the unit itself." Deprecated="False" filter="0" group="General" />
+
+        <TunableVariant type="None" name="contractor_picker_data" class="OptionalTunable" default="disabled" display="Contractor Picker Data" muid="AD59CF9E03546DA5" description="The data for hire a contractor picker. You only need to tune it if it's a emergency type event." Deprecated="False" filter="0" group="General">
+            <Tunable name="disabled" class="TunableExistance" display="Disabled" muid="CE518B55CD70097" />
+            <TunableTuple name="enabled" class="TunableTuple" display="Enabled" muid="A98464BEB5B0DC3" Deprecated="False" filter="0" group="General">
+                <Tunable type="int" name="experienced_contractor_cost" class="Tunable" default="400" display="Experienced Contractor Cost" muid="4ECAE2A17E33162A" description="The cost of simoleons to hire a experienced contractor." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                <Tunable type="ResourceKey" name="icon" class="TunableIcon" default="None" display="Icon" muid="8C751EA69F09B0AC" description="The event icon in hire contractor picker. " Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                <Tunable type="int" name="inexperienced_contractor_cost" class="Tunable" default="200" display="Inexperienced Contractor Cost" muid="AC2BD3C9C1CE05D3" description="The cost of simoleons to hire a inexperienced contractor." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                <Tunable type="int" name="name" class="TunableLocalizedString" default="0x0" display="Name" muid="D34BAD77F5639D56" description="The event display name in hire contractor picker. " Deprecated="False" filter="0" group="General" />
+            </TunableTuple>
+        </TunableVariant>
+
+        <TunableVariant type="None" name="event_type" class="OptionalTunable" default="disabled" display="Event Type" muid="7D7471CBBBA5D692" description="If enabled, this represents the Multi Unit event type, and will be used to &#xA;connect APM and MULE drama nodes." Deprecated="False" filter="0" group="General">
+            <Tunable name="disabled" class="TunableExistance" display="Disabled" muid="904A12D29A7CB92C" />
+            <TunableEnum type="MultiUnitEventType" name="enabled" class="TunableEnumEntry" default="INVALID" display="Enabled" muid="D957D39A87CC700B" dynamic_entries="multi_unit-multi_unit_tuning.MultiUnitEventType._elements" static_entries="multi_unit-multi_unit_tuning.MultiUnitEventType" description="The MultiUnitEventType enum representing the event type." Deprecated="False" filter="0" group="General" />
+        </TunableVariant>
+
+        <TunableList name="failure_loots" class="TunableList" display="Failure Loots" muid="7F1951C75B5FE84" description="Loots that will be applied upon a failed event outcome, meaning the attempt &#xA;to resolve it was not successful." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="48BB30F78A4921FE" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions,RandomWeightedLoot" />
+        </TunableList>
+
+        <TunableList name="fallback_loots" class="TunableList" display="Fallback Loots" muid="A2E55F56821ED885" description="If this event ends while the receiver household is inactive, these loots will&#xA;be applied by the MultiUnitEventService once the household is active again." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="6BF1274FFB7C34E2" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions,RandomWeightedLoot" />
+        </TunableList>
+
+        <TunableList name="lapsed_loots" class="TunableList" display="Lapsed Loots" muid="3B429433985A7AB" description="Loots that will be applied if the event times out, meaning there was no &#xA;attempt to resolve the issue." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="855B1B48077A96D1" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions,RandomWeightedLoot" />
+        </TunableList>
+
+        <TunableList name="loots_on_schedule" class="TunableList" display="Loots On Schedule" muid="1D2E1956F444C435" description="Loots that will be applied once this drama node is scheduled, meaning this&#xA;event is now active on a rental unit." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="75AAC037FC858E3C" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions" />
+        </TunableList>
+
+        <Tunable type="bool" name="property_owner_event" class="Tunable" default="True" display="Property Owner Event" muid="2344FFE0823809E0" description="If this flag is set to True, this event is treated as an autonomous property management node.&#xA;If this flag is set to False, this event is treated as a multi unit living events node." Deprecated="False" filter="0" group="General" />
+
+        <Tunable type="bool" name="send_initial_outcome_telemetry" class="Tunable" default="False" display="Send Initial Outcome Telemetry" muid="8142734396DDD06E" description="Whether or not telemetry should be sent for this event drama node when the outcome is first set." Deprecated="False" filter="0" group="General" />
+
+        <Tunable type="bool" name="start_in_any_relevant_unit" class="Tunable" default="True" display="Start In Any Relevant Unit" muid="2B276C47A63E97E3" description="If this flag is set to True and if the drama node has common_area_event set, if APM starts the&#xA;event on any rental unit on the current lot it will start the event in the current zone regardless&#xA;if the event belongs to the current unit or not." Deprecated="False" filter="0" group="General" />
+
+        <Tunable type="bool" name="start_mu_situation" class="Tunable" default="True" display="Start Mu Situation" muid="29FB17F20E4AFA83" description="If this flag is set to True, then the Multi Unit Event Service will start the situation when&#xA;a tenant sim or property owner sim visits the rental unit." Deprecated="False" filter="0" group="General" />
+
+        <TunableList name="success_loots" class="TunableList" display="Success Loots" muid="3827A330CFD345C1" description="Loots that will be applied upon a successful event outcome, meaning the&#xA;the attempt to resolve it was successful." Deprecated="False" filter="0" group="General">
+            <Tunable type="action" class="TunableReference" muid="7700E1789D194E91" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="LootActions,RandomWeightedLoot" />
+        </TunableList>
+
+        <TunableList name="unit_zone_modifiers" class="TunableList" display="Unit Zone Modifiers" muid="CF6FEFF03E1587EC" description="A list of lot traits that may be applied if a Property Owner or Tenant of a&#xA;rental unit loads into that zone, while the event for this unit is active." Deprecated="False" filter="0" group="General">
+            <Tunable type="zone_modifier" class="TunableReference" muid="BAF7D4D1F959CDD" allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" restrict="ZoneModifier" />
+        </TunableList>
+    </Instance>
+</TuningRoot>

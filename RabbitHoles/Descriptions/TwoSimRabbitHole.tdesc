@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="rabbit_hole" class="TwoSimRabbitHole" module="rabbit_hole.multi_sim_rabbit_hole" muid="4BEAFEA15C5AF007" description="A multi sim rabbit hole for just two sims." instance_needs_reference="True" instance_subclasses_only="False" parents="MultiSimRabbitHoleBase, RabbitHole" path="RabbitHoles\Descriptions" use_guid_for_reference="True">
+        <TunableList name="first_participant_types" class="TunableSet" display="First Participant Types" muid="3A31BD98BE27B0F0" description="The participant types that should map to the first sim.&#xA;&#xA;Note: The first participant will always map to actor, so it is not needed here." Deprecated="False" filter="0" group="General" unique_entries="true">
+            <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Actor" muid="7333CF0FF9816686" static_entries="interactions.ParticipantType" description="A participant type that should map to the first sim." Deprecated="False" filter="0" group="General" />
+        </TunableList>
+
+        <TunableList name="second_participant_types" class="TunableSet" display="Second Participant Types" muid="B3BAABFF723064AC" description="The participant types that should map to the second sim." Deprecated="False" filter="0" group="General" unique_entries="true">
+            <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="TargetSim" muid="8B6793018B346D80" static_entries="interactions.ParticipantType" description="A participant type that should map to the second sim." Deprecated="False" filter="0" group="General" />
+        </TunableList>
+    </Instance>
+</TuningRoot>

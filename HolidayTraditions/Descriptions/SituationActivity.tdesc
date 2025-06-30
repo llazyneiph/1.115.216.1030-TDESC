@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="holiday_tradition" class="SituationActivity" module="situations.situation_activity" muid="888B722F4D18ADA4" description="Represents an Activity that can be selected during Situation Creation.&#xA;&#xA;This class inherits from HolidayTradition but is not used in the Holiday system. The tuning requirements matched&#xA;well enough and the UI for selecting Activities will match the HolidayTradition picker, so it made sense to use&#xA;HolidayTradition as a base." instance_subclasses_only="False" parents="HolidayTradition" path="HolidayTraditions\Descriptions" use_guid_for_reference="True">
+        <Deleted name="additional_walkbys" muid="30E889BE7D894992" />
+
+        <Deleted name="business_cost_multiplier" muid="635AE8F8C809C33F" />
+
+        <Deleted name="core_object_tags" muid="D86110013D5536CB" />
+
+        <Deleted name="deco_object_tags" muid="F052E392CC53FC54" />
+
+        <Deleted name="drama_nodes_to_run" muid="4F2BA6A063AA974" />
+
+        <Deleted name="drama_nodes_to_score" muid="1305FCEC51A2E03E" />
+
+        <Deleted name="events" muid="C2D4DC20E6304F74" />
+
+        <Deleted name="holiday_buff_reason" muid="FB18A65766A0F3E2" />
+
+        <Deleted name="holiday_buffs" muid="3B5773C7346F7D49" />
+
+        <Deleted name="lifecycle_actions" muid="DFA7868FF64EEA9E" />
+
+        <Deleted name="pre_holiday_buff_reason" muid="CD1FAE8A1697509" />
+
+        <Deleted name="pre_holiday_buffs" muid="6BA0DC76FB1D990E" />
+
+        <Deleted name="preference" muid="4D3C0C3CDC4997AF" />
+
+        <Deleted name="preference_reward_buff" muid="CA8281E107BBC82D" />
+    </Instance>
+</TuningRoot>
