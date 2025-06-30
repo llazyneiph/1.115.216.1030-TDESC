@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="trait" class="BasePreference" module="traits.base_preference" muid="F520D4BFD48BDA91" description="BasePreference is a stub class, used to signify that multiple classes are Sim Preferences, despite them having&#xA;little to no overlap in code. In the future, if there's common functionality identified between all Sim Preference&#xA;classes, that functionality should be moved to this class." instance_subclasses_only="False" parents="Trait" path="Traits\Descriptions" use_guid_for_reference="True" />
+</TuningRoot>

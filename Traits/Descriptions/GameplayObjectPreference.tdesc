@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="trait" class="GameplayObjectPreference" module="traits.gameplay_object_preference" muid="67C9E445397B2C4C" description="Gameplay Object Preferences are Traits that assign an Object a Preference Type during gameplay." instance_subclasses_only="False" parents="BasePreference, Trait" path="Traits\Descriptions" use_guid_for_reference="True">
+        <Tunable type="object" name="preference_item" class="TunableReference" display="Preference Item" muid="F5A1E2B8C01EACF2" description="The item marked by the preference of the owner." allow_none="False" Deprecated="False" filter="0" group="Special Cases" />
+
+        <TunableEnum type="TraitTypeGameplayObjectPreference" name="trait_type" class="TunableEnumEntry" default="GAMEPLAY_OBJECT_PREFERENCE" display="Trait Type" muid="65BE94DB49E80BF" static_entries="traits-gameplay_object_preference.TraitTypeGameplayObjectPreference" description="The trait type for Gameplay Object Preferences." Deprecated="False" export_modes="client_binary,server_binary,server_xml" filter="0" group="General" />
+    </Instance>
+</TuningRoot>

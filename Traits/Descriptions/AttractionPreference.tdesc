@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="trait" class="AttractionPreference" module="traits.attraction_preference" muid="2900086FFB878F87" description="Attraction Preferences are traits that represent a sim's preferences which influence attraction&#xA;towards other sims." instance_subclasses_only="False" parents="Preference, BasePreference, Trait" path="Traits\Descriptions" use_guid_for_reference="True">
+        <TunableTuple name="attraction_modifier" class="TunableTestedSum" display="Attraction Modifier" muid="74943FB33D1B0B0F" description="A tested sum that will be applied towards the actor sim's attraction&#xA;towards the target sim." Deprecated="False" filter="0" group="General">
+            <Tunable type="float" name="base_value" class="Tunable" default="0" display="Base Value" muid="196ACA1C3A4C8FE1" description="The basic value to return if no modifiers are applied." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+            <TunableList name="modifiers" class="TunableList" display="Modifiers" muid="B484D09BFB5E7BB5" description="A list of modifiers to add to Base Value." Deprecated="False" filter="0" group="General">
+                <TunableTuple class="TunableTuple" muid="2913BCD7EAF75C4D" Deprecated="False" filter="0" group="General">
+                    <Tunable type="float" name="modifier" class="Tunable" default="0" display="Modifier" muid="4EDCD068BC481D66" description="The value to apply add to Base Value if the associated&#xA;tests pass. Can be negative" tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                    <TdescFragTag name="tests" class="TunableTestSet" display="Tests" muid="CAF79D2D9727503" description="A series of tests that must pass in order for the modifier&#xA;to be applied." filter="0" group="General" />
+                </TunableTuple>
+            </TunableList>
+        </TunableTuple>
+    </Instance>
+</TuningRoot>
