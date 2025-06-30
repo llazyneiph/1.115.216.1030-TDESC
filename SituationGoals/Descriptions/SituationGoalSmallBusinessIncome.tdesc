@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalSmallBusinessIncome" module="small_business.small_business_situation_goals" muid="A2BFF0F8EF77F2B2" description="Situation Goal that enables checking for a specific kind of Small Business Income." instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <Deleted name="_iterations" muid="6CE7B26795482DB" />
+
+        <Deleted name="_post_tests" muid="4E2BD64C523BCD70" />
+
+        <Tunable type="int" name="amount_to_earn" class="Tunable" default="0" display="Amount To Earn" muid="261BA1945C92EE8C" description="Amount to earn in order to consider this goal as completed." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="Goals" />
+
+        <TunableList name="revenue_types" class="TunableList" display="Revenue Types" muid="E66CE9C6093A4CA4" description="The types of the payment we want to track." Deprecated="False" filter="0" group="Goals">
+            <TunableEnum type="PaymentBusinessRevenueType" class="TunableEnumEntry" default="SMALL_BUSINESS_INTERACTION_FEE" muid="A8EA993C1CC2D917" static_entries="interactions-payment-payment_info.PaymentBusinessRevenueType" description="The type of the payment we want to track." Deprecated="False" filter="0" group="General" />
+        </TunableList>
+    </Instance>
+
+    <VersionHistory>
+        <ActionList>
+            <Action type="kRemove" old_muid="6D89E9D77E70ACE" />
+            <Action type="kRemove" old_muid="7520E68005CED96B" />
+        </ActionList>
+
+        <ActionList>
+            <Action type="kRemove" old_muid="9A0A343D6166EBD2" />
+        </ActionList>
+    </VersionHistory>
+</TuningRoot>

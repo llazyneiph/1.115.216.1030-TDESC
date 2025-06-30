@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalDeath" module="situations.situation_goal_death" muid="2446C811D6120C31" description="Situation Goal for Sim's death types." instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <TunableTuple name="_goal_test" class="TunableDeadTest" display="Goal Test" muid="56699A7FB6CF67AF" description="Test to see if sim is dead. It is true is sim is a ghost too." Deprecated="False" filter="0" group="Tests">
+            <Tunable type="bool" name="invert" class="Tunable" default="False" display="Invert" muid="3D171937ED55D9F6" description="If true, invert the result of this test." Deprecated="False" filter="0" group="General" />
+        </TunableTuple>
+    </Instance>
+</TuningRoot>

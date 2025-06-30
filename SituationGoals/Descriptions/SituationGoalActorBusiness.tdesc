@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalActorBusiness" module="situations.situation_goal_actor" muid="625E6467096317BC" description="Situation Goal for Sim's Business events." instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoalActor, SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <TunableVariant type="None" name="_goal_test" class="TunableVariant" default="none" display="Goal Test" muid="D10B97B7724746F7" description="Business test which triggers evaluation of goal completion." Deprecated="False" filter="0" group="Tests">
+            <TunableTuple name="business_test" class="TunableBusinessTest" display="Business Test" muid="6EEA0DB36C371028" description="Check to see if the business triggered its milestone events" Deprecated="False" filter="0" group="General">
+                <TunableEnum type="BusinessType" name="business_type" class="TunableEnumEntry" default="INVALID" display="Business Type" muid="8E8B295658678042" static_entries="business-business_enums.BusinessType" description="The business type to which this reward should be given." Deprecated="False" filter="0" group="General" invalid_entries="INVALID" />
+                <TunableEnum type="BusinessTestEvents" name="test_event" class="TunableEnumEntry" default="None" display="Test Event" muid="74465681A943F22C" static_entries="event_testing-test_variants.BusinessTestEvents" description="The event that we want to trigger this instance of the tuned&#xA;test on.&#xA;Register: Triggers when business is registered&#xA;FirstSimoleonEarned = Triggers when a business earned first simoleon&#xA;Sold = Triggers when a business is sold" Deprecated="False" filter="0" group="General" />
+            </TunableTuple>
+            <Tunable name="none" class="TunableExistance" display="None" muid="1E4D4680620E700D" />
+        </TunableVariant>
+    </Instance>
+</TuningRoot>

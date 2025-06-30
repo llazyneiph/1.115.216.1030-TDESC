@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalActorTrait" module="situations.situation_goal_actor" muid="3BE26C686A171B69" description="Situation goal for a Sim having/getting a trait." instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoalActor, SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <TunableTuple name="_goal_test" class="TunableTraitTest" display="Goal Test" muid="2DEF01C7E34377F5" description="Primary test which triggers evaluation of goal completion." Deprecated="False" filter="0" group="Tests">
+            <Tunable type="bool" name="apply_thresholds_on_individual_basis" class="Tunable" default="True" display="Apply Thresholds On Individual Basis" muid="FAA4752A15853382" description="If checked then Num Whitelist Required and Num Blacklist Allowed&#xA;will be applied to each individual participant from the subject.&#xA;If unchecked then it will apply the values to the total whitelist&#xA;and blacklist matches on the group.&#xA;&#xA;IMPORTANT!!!&#xA;In the case of objectives this should probably be set to false&#xA;since we know that this is coming from only one sim and that we&#xA;want to use the value that comes out of the test result numeric.&#xA;This isn't just locked to being this value since there are valid&#xA;cases within that system when you are looking at a group of sims&#xA;and could want to test that one of your sims passes.  Ex. Having&#xA;a ghost sim in the household." Deprecated="False" filter="0" group="General" />
+            <Tunable type="int" name="num_whitelist_required" class="Tunable" default="1" display="Num Whitelist Required" muid="311B889A9DE12B67" description="The number of whitelist traits that the specified Sim is required to&#xA;have in order to pass this test." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+            <TunableList name="whitelist_trait_types" class="TunableEnumSet" display="Whitelist Trait Types" muid="5F7D9E965C3BE40E" description="The Sim is required to have the specified number of traits with &#xA;these types in order to pass the test." Deprecated="False" filter="0" group="General" unique_entries="true">
+                <TunableEnum type="TraitType" class="TunableEnumEntry" default="PERSONALITY" muid="AE0AB595816FC034" static_entries="traits-trait_type.TraitType" Deprecated="False" filter="0" group="General" />
+            </TunableList>
+            <TunableList name="whitelist_traits" class="TunableList" display="Whitelist Traits" muid="3F9B365246257EEF" description="The Sim is required to have the specified number of traits from this&#xA;list in order to pass the test." Deprecated="False" filter="0" group="General">
+                <Tunable type="trait" class="TunableReference" muid="DE0818F54612BCEA" description="A whitelist trait. Please note: for pack-safe entries that are&#xA;not loaded, the game will behave as if the entry doesn't exist.&#xA;This allows you to specify a pack trait and required count of 1&#xA;and always fail the test should the appropriate pack not be&#xA;installed." allow_none="False" Deprecated="False" filter="0" group="General" pack_safe="True" />
+            </TunableList>
+        </TunableTuple>
+    </Instance>
+</TuningRoot>

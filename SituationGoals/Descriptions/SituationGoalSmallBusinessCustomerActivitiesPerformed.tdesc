@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalSmallBusinessCustomerActivitiesPerformed" module="small_business.small_business_situation_goals" muid="57FB247C1A0AD45E" description="Situation Goal that enables checking for an amount of business activities done by the customers in a Small Business" instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <Deleted name="_iterations" muid="605578859F7A586" />
+
+        <Deleted name="_post_tests" muid="F500E815988F8483" />
+
+        <Tunable type="int" name="number_of_activities_to_complete" class="Tunable" default="1" display="Number Of Activities To Complete" muid="A84542DE0A9C44F3" description="Amount of customers activities that should be done to consider the goal as completed." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="Goals" />
+    </Instance>
+
+    <VersionHistory>
+        <ActionList>
+            <Action type="kRemove" old_muid="6D89E9D77E70ACE" />
+            <Action type="kRemove" old_muid="7520E68005CED96B" />
+        </ActionList>
+    </VersionHistory>
+</TuningRoot>

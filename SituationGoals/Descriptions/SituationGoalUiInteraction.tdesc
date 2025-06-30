@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Instance instance_type="situation_goal" class="SituationGoalUiInteraction" module="situations.situation_goal_ui_interaction" muid="F689C39D07713634" description="Situation Goal that checks if a UI elements is interacted with." instance_needs_reference="True" instance_subclasses_only="False" parents="SituationGoal" path="SituationGoals\Descriptions" use_guid_for_reference="True">
+        <TunableEnum type="TutorialTipUiElement" name="_ui_element" class="TunableEnumEntry" default="UI_INVALID" display="Ui Element" muid="370ACE165049E2CC" static_entries="tutorials-tutorial_tip_enums.TutorialTipUiElement" description="The UI element that when clicked will satisfy this goal." Deprecated="False" filter="0" group="General" invalid_entries="UI_INVALID" />
+    </Instance>
+</TuningRoot>
